@@ -1,21 +1,17 @@
 # Security Policy
 
-## Supported Versions
+mailhearth processes private email, so we take security reports seriously.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## Reporting a vulnerability
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Please do not open a public issue. Use GitHub's
+"Report a vulnerability" button under the Security tab, or email
+lahirucw1@gmail.com.
 
-## Reporting a Vulnerability
+We aim to acknowledge reports within a few days and will keep you
+updated on the fix.
 
-Use this section to tell people how to report a vulnerability.
+## Scope
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+In scope: the mailhearth core, CLI, and anything that could leak mail
+content, credentials, or tokens off the user's machine.
