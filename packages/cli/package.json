@@ -1,0 +1,26 @@
+{
+  "name": "@mailhearth/cli",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "type": "module",
+  "bin": {
+    "hearth": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@mailhearth/core": "workspace:*",
+    "commander": "^12.1.0"
+  }
+}

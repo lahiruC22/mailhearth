@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.mbox
+*.eml
+*.sqlite
+*.db
+datasets/
+labeled/
+takeout/
+*.gguf
+.DS_Store
