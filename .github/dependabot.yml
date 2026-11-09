@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"        # also covers pnpm lockfiles
+  - package-ecosystem: "npm" # also covers pnpm lockfiles
     directory: "/"
     schedule:
       interval: "weekly"
