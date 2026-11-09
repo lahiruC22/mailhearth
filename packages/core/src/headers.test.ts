@@ -17,6 +17,17 @@ describe("parseListUnsubscribe", () => {
   it("ignores unsupported schemes", () => {
     expect(parseListUnsubscribe("<ftp://example.com/x>")).toEqual({ mailto: [], http: [] });
   });
+
+  it("does not let a stray '<' swallow the next target", () => {
+    expect(parseListUnsubscribe("<foo<https://example.com/u>").http).toEqual([
+      "https://example.com/u",
+    ]);
+  });
+
+  it("ignores absurdly long header values", () => {
+    const huge = `<https://example.com/${"a".repeat(10_000)}>`;
+    expect(parseListUnsubscribe(huge)).toEqual({ mailto: [], http: [] });
+  });
 });
 
 describe("looksLikeBulk", () => {
